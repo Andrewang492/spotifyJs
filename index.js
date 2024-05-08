@@ -6,9 +6,11 @@ const {Shuffler} = require('./scripts/random.js');
 const { redirect } = require('express/lib/response.js');
 const port = 8888;
 
+// const baseurl = 'http://localhost:8888';
+const baseurl = 'https://spotifyshufflejs.onrender.com';
 var client_id = '7da9513d8a1b44b9b9494cb0ed061466';
 const client_secret = 'af6fc6286d934d40b3bf916397a6afb5';
-var redirect_uri = 'http://localhost:8888/callback';
+var redirect_uri = `${baseurl}/callback`;
 
 var scope = `
   user-read-playback-state 
