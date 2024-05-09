@@ -1,4 +1,6 @@
 const express = require('express')
+require('dotenv').config()
+
 const querystring = require('node:querystring'); 
 const generateRandomString = require('./randomString.js');
 const {getCurrentContext} = require('./scripts/client.js');
@@ -6,10 +8,10 @@ const {Shuffler} = require('./scripts/random.js');
 const { redirect } = require('express/lib/response.js');
 const port = 8888;
 
-// const baseurl = 'http://localhost:8888';
-const baseurl = 'https://spotifyshufflejs.onrender.com';
-var client_id = '7da9513d8a1b44b9b9494cb0ed061466';
-const client_secret = 'af6fc6286d934d40b3bf916397a6afb5';
+const baseurl = 'http://localhost:8888';
+// const baseurl = 'https://spotifyshufflejs.onrender.com';
+const client_id = process.env.CLIENT_ID;
+const client_secret = process.env.CLIENT_SECRET;
 var redirect_uri = `${baseurl}/callback`;
 
 var scope = `
@@ -32,6 +34,8 @@ app.get('/', (req, res) => {
     <a href="/login"><button>login</button></a>
     <a href="/s"><button>some info</button></a>
     <a href="/shuffle"><button>shuffle</button></a>
+    <a href="/recent"><button>recently played</button></a>
+
     `)
 })
 
