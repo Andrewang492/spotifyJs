@@ -8,7 +8,7 @@ const {Shuffler} = require('./scripts/random.js');
 const { redirect } = require('express/lib/response.js');
 const port = 8888;
 
-const baseurl = process.env.BASEURL;
+const baseurl = process.env.BASE_URL;
 // const baseurl = 'https://spotifyshufflejs.onrender.com';
 const client_id = process.env.CLIENT_ID;
 const client_secret = process.env.CLIENT_SECRET;
