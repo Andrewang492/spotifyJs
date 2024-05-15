@@ -1,0 +1,1 @@
+Available here [https://spotifyshufflejs.onrender.com/](https://spotifyshufflejs.onrender.com/). It may take a while to load at first. Remember to log in to Spotify first, remember to play/have played from a playlist to shuffle. Then you can press shuffle.
